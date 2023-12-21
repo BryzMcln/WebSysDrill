@@ -27,10 +27,11 @@ if (isset($_POST['submit'])) {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user data into the database
-    $insert = "INSERT INTO register (first_name, last_name, email, phone_num, password) VALUES ($firstName, $lastName, $email, $phoneNum, $password)";
+    $insert = "INSERT INTO register (first_name, last_name, email, phone_num, password) VALUES (?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $insert);
     mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $email, $phoneNum, $hashedPassword);
+
 
     if (mysqli_stmt_execute($stmt)) {
         $_SESSION['name'] = $firstName;
