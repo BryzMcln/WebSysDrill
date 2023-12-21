@@ -1,0 +1,177 @@
+body {
+    background-color: #c7e0f4;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #71afe5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    margin-left: 10px;
+    color: #004578;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+}
+
+.sel-main {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sel-main li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.sel-main a {
+    text-decoration: none;
+    color: #1167b1;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sel-main a:hover {
+    background-color: #004578;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #d0efff;
+}
+
+.form-container {
+    background-color: #71afe5;
+    color: #004578;
+    padding: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    margin: 10px;
+}
+
+.form-container h2 {
+    color: #004578;
+}
+
+.form-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.form-container li {
+    margin-bottom: 10px;
+}
+
+.form-container input {
+    border: 1px solid #187bcd;
+}
+
+.form-container button {
+    background-color: #005a9e;
+    color: #d0efff;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #004578;
+}
+
+.prof_img {
+    width: 250px;
+    height: 250px;
+    transition: width 0.3s ease, height 0.3s ease;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
+.prof_img:hover {
+    width: 300px;
+    height: 300px;
+}
+
+.ul1 {
+    margin-right: 30px;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    margin: 0 auto;
+    /* Center the container */
+    max-width: 50%;
+    /* Set the maximum width to 50% */
+}
+
+
+
+.p1,
+.p2,
+.p3,
+.p4 {
+    padding: 20px;
+    border: 5px #004578;
+}
+
+.p1 p,
+.p2 p,
+.p3 p,
+.p4 p {
+    text-align: center;
+}
+
+.p1 img,
+.p2 img,
+.p3 img,
+.p4 img {
+    width: 200px;
+    height: 200px;
+}
+
+.log-out {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.log-out li {
+    margin-right: 20px;
+}
+
+.log-out a {
+    text-decoration: none;
+    color: #1167b1;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.log-out a:hover {
+    background-color: #ff2c2c;
+    box-shadow: 2px 2px 4px #f94449;
+    border: 1px solid #171616;
+    color: #171616;
+}

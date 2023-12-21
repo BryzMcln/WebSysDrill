@@ -1,0 +1,111 @@
+body {
+    background-color: #c7e0f4;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #71afe5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    margin-left: 10px;
+    color: #004578;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+}
+
+.sel-main {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sel-main li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.sel-main a {
+    text-decoration: none;
+    color: #1167b1;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sel-main a:hover {
+    background-color: #004578;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #d0efff;
+}
+
+.contact-form {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #71afe5;
+    /* White background for the form */
+}
+
+.contact-form h2 {
+    color: #004578;
+}
+
+.contact-form form {
+    display: grid;
+    grid-gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #71afe5;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #1167b1;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    width: 70%;
+    justify-self: center;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #004578;
+}
+
+textarea,
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

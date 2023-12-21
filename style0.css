@@ -1,0 +1,85 @@
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #c7e0f4;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #71afe5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h1 {
+    color: #004578;
+    font-size: 50px;
+    transition: color 0.3s ease;
+}
+
+.login-form h1:hover {
+    color: #c7e0f4;
+    text-shadow: 2px 2px 5px #1167b1;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #1167b1;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #187bcd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #005a9e;
+    color: #d0efff;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004578;
+}
+
+.register-link {
+    margin-top: 15px;
+    text-align: center;
+    color: #1167b1;
+}
+
+.register-link a {
+    color: #004578;
+    text-decoration: underline;
+}
+
+.register-link a:hover {
+    color: #d0efff;
+}
