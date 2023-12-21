@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user data into the database
-    $insert = "INSERT INTO register (first_name, last_name, email, phone_num, password) VALUES (?, ?, ?, ?, ?)";
+    $insert = "INSERT INTO register (first_name, last_name, email, phone_num, password) VALUES ($firstName, $lastName, $email, $phoneNum, $password)";
 
     $stmt = mysqli_prepare($conn, $insert);
     mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $email, $phoneNum, $hashedPassword);
