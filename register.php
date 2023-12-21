@@ -51,6 +51,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style1.css" />
+    <script src="reg_js.js"></script>
     <title>Register</title>
 </head>
 
