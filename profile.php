@@ -25,9 +25,10 @@ if (isset($_SESSION['email'])) {
         // Handle error if needed
         die("Error fetching user details: " . mysqli_error($conn));
     }
+
 } else {
-    // Handle the case where email is not set in the session
-    die("Error: Email not set in session");
+    header('location: login.php');
+    exit();
 }
 ?>
 
@@ -37,45 +38,43 @@ if (isset($_SESSION['email'])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style3.css" />
-    <title>Profile Page</title>
+    <link rel="stylesheet" href="style2.css" />
+    <title>Home</title>
+    <script>
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
 </head>
 
 <body>
     <header>
-        <div class="header-content">
+        <div class="header-content"> <!-- Home Header Navigation -->
             <div class="logo-container">
-                <h1 class="site-title">Profile</h1>
+                <img src="logo.png" alt="Website Logo" class="logo-image" />
+                <h1 class="site-title">WebSite</h1>
             </div>
-            <nav class="main-nav">
-                <ul class="sel-main">
-                    <li><a href="home.php">Home</a></li>
+            <nav>
+                <ul>
+                    <li><a href="profile.php">Profile</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                </ul>
-                <!-- Inside the navigation section of profile.php -->
-                <ul class="log-out">
-                    <li><a href="logout.php">Sign out</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="form-container">
-        <div class="personal-info">
-            <img src="profile.jpeg" alt="Profile Image" class="prof_img" />
-            <ul class="ul1">
-                <li><strong>Name:</strong>
-                    <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>
-                </li>
-                <li><strong>Email:</strong> <em>
-                        <?php echo $user['email']; ?>
-                    </em></li>
-                <li><strong>Contact Number:</strong>
-                    <?php echo $user['phone_num']; ?>
-                </li>
-            </ul>
+    <div class="user-welcome" id="userWelcome">
+        <h2>Welcome, <span id="userName"></span></h2> <!-- User Welcoming the user -->
+        <div class="collection">
         </div>
+
     </div>
+    </div>
+    <script>
+        var userName = "<?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'Guest'; ?>";
+        document.getElementById("userName").innerText = userName;
+    </script>
 </body>
 
 </html>
