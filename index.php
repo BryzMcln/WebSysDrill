@@ -20,7 +20,7 @@ if (isset($_SESSION['email'])) {
 
 <body>
     <header class="header-panel">
-        <h1>Hello World, <span class="auto-type"></span></h1>
+        <h1>Hello World, <span class="auto-type"></span></h1> <!-- type animation-->
     </header>
     <div class="button-container">
         <a href="login.php" class="custom-button">
@@ -32,7 +32,8 @@ if (isset($_SESSION['email'])) {
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script>
             var typed = new Typed(".auto-type", {
-                strings: ["How are yah?", "Y'all good?", "Sup!", "Let's get started!", "Eat Nice", "Code Well", "Sleep Noicely"],
+                strings: ["How are yah?", "Y'all good?", "Sup!", "Let's get started!",
+                    "Eat Nice", "Code Well", "Sleep Noicely"],
                 typeSpeed: 30,
                 backSpeed: 40,
                 loop: true

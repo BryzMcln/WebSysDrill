@@ -59,7 +59,9 @@ if (isset($_POST['submit'])) {
     <div class="register-container">
         <h1 class="head-title">Register</h1>
         <?php if ($registerError) : ?>
-            <p class="error-message"><?php echo $registerError; ?></p>
+        <p class="error-message">
+            <?php echo $registerError; ?>
+        </p>
         <?php endif; ?>
         <form action="" method="post" class="register-form">
             <label for="first_name">First Name:</label>

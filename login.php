@@ -60,7 +60,9 @@ if (isset($_POST['submit'])) {
         <form action="" method="post" class="login-form">
             <h1>Login</h1>
             <?php if ($loginError) : ?>
-                <p class="error-message"><?php echo $loginError; ?></p>
+            <p class="error-message">
+                <?php echo $loginError; ?>
+            </p>
             <?php endif; ?>
 
             <label for="email">Email:</label>

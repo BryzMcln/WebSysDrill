@@ -54,7 +54,7 @@ if (isset($_SESSION['email'])) {
                 </ul>
                 <!-- Inside the navigation section of profile.php -->
                 <ul class="log-out">
-                  <li><a href="logout.php">Sign out</a></li>
+                    <li><a href="logout.php">Sign out</a></li>
                 </ul>
             </nav>
         </div>
@@ -64,9 +64,15 @@ if (isset($_SESSION['email'])) {
         <div class="personal-info">
             <img src="profile.jpeg" alt="Profile Image" class="prof_img" />
             <ul class="ul1">
-                <li><strong>Name:</strong> <?php echo $user['first_name'] . ' ' . $user['last_name']; ?></li>
-                <li><strong>Email:</strong> <em><?php echo $user['email']; ?></em></li>
-                <li><strong>Contact Number:</strong> <?php echo $user['phone_num']; ?></li>
+                <li><strong>Name:</strong>
+                    <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>
+                </li>
+                <li><strong>Email:</strong> <em>
+                        <?php echo $user['email']; ?>
+                    </em></li>
+                <li><strong>Contact Number:</strong>
+                    <?php echo $user['phone_num']; ?>
+                </li>
             </ul>
         </div>
     </div>
