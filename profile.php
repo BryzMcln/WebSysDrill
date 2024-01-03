@@ -78,7 +78,7 @@ if (isset($_SESSION['email'])) {
                 </ul>
             </div>
         <?php else : ?>
-            <p class="unknown-profile-message">Profile is unknown. Please log in.</p>
+            <p class="unknown-profile-message">Profile is unknown. Please <a href="login.php">Login</a>.</p>
         <?php endif; ?>
     </div>
 </body>
