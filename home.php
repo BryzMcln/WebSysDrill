@@ -26,10 +26,10 @@ if (isset($_SESSION['email'])) {
         die("Error fetching user details: " . mysqli_error($conn));
     }
 
+    $welcomeMessage = "Welcome, " . $user['first_name'];
 } else {
-    // Redirect to login page if the user is not logged in
-    header('location: login.php');
-    exit();
+    // If the user is not logged in, welcome them as a guest
+    $welcomeMessage = "Welcome, Guest";
 }
 ?>
 
@@ -42,9 +42,10 @@ if (isset($_SESSION['email'])) {
     <link rel="stylesheet" href="style2.css" />
     <title>Profile</title>
     <script>
-        history.pushState(null, null, document.URL);
-        window.addEventListener('popstate', function () {
-            history.pushState(null, null, document.URL);
+        // Prevent going back to the login page after logging in
+        window.history.pushState(null, null, window.location.href);
+        window.addEventListener('popstate', function (event) {
+            window.history.pushState(null, null, window.location.href);
         });
     </script>
 </head>
@@ -66,9 +67,7 @@ if (isset($_SESSION['email'])) {
     </header>
 
     <div class="user-welcome" id="userWelcome">
-        <h2>Welcome, <span id="userName">
-                <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'Guest'; ?>
-            </span></h2> <!-- Displaying the user's name or 'Guest' -->
+        <h2><?php echo $welcomeMessage; ?></h2>
         <div class="collection">
             <!-- Profile content goes here -->
         </div>
