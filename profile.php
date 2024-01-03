@@ -26,11 +26,11 @@ if (isset($_SESSION['email'])) {
         die("Error fetching user details: " . mysqli_error($conn));
     }
 
-} else {
+} /* else {
     // Redirect to login page if user is not logged in
     header('location: login.php');
     exit();
-}
+} */
 ?>
 
 <!DOCTYPE html>
@@ -62,21 +62,24 @@ if (isset($_SESSION['email'])) {
         </div>
     </header>
 
-     <div class="form-container">
-        <div class="personal-info">
-            <img src="profile.jpeg" alt="Profile Image" class="prof_img" />
-            <ul class="ul1">
-                <li><strong>Name:</strong>
-                    <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>
-                </li>
-                <li><strong>Email:</strong> <em>
-                        <?php echo $user['email']; ?>
-                    </em></li>
-                <li><strong>Contact Number:</strong>
-                    <?php echo $user['phone_num']; ?>
-                </li>
-            </ul>
-        </div>
+    <div class="form-container">
+        <?php if (isset($_SESSION['email'])) : ?>
+            <div class="personal-info">
+                <ul class="ul1">
+                    <li><strong>Name:</strong>
+                        <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>
+                    </li>
+                    <li><strong>Email:</strong> <em>
+                            <?php echo $user['email']; ?>
+                        </em></li>
+                    <li><strong>Contact Number:</strong>
+                        <?php echo $user['phone_num']; ?>
+                    </li>
+                </ul>
+            </div>
+        <?php else : ?>
+            <p class="unknown-profile-message">Profile is unknown. Please log in.</p>
+        <?php endif; ?>
     </div>
 </body>
 
