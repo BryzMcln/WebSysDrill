@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
             <input type="email" id="email" name="email" required />
 
             <label for="phone_num">Phone Number:</label>
-            <input type="text" id="phone_num" name="phone_num" required />
+            <input type="text" id="phone_num" name="phone_num" maxlength="11" required />
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required />

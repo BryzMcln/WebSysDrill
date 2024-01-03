@@ -1,10 +1,22 @@
 function validateForm() {
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lastName").value;
+  var firstName = document.getElementById("first_name").value;
+  var lastName = document.getElementById("last_name").value;
   var email = document.getElementById("email").value;
-  var mobileNumber = document.getElementById("mobileNumber").value;
+  var mobileNumber = document.getElementById("phone_num").value;
   var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
+  var confirmPassword = document.getElementById("confirm_password").value;
+
+  // Check if email contains @ symbol
+  if (email.indexOf("@") === -1) {
+    alert("Enter a valid email address");
+    return false;
+  }
+
+  // Check if mobile number has 11 digits
+  if (mobileNumber.length !== 11) {
+    alert("Mobile Number should have exactly 11 digits");
+    return false;
+  }
 
   if (firstName.length < 5 || firstName.length > 50) {
     alert("First Name should have 5 to 50 characters");
