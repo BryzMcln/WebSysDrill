@@ -67,7 +67,9 @@ if (isset($_SESSION['email'])) {
     </header>
 
     <div class="user-welcome" id="userWelcome">
-        <h2><?php echo $welcomeMessage; ?></h2>
+        <h2>
+            <?php echo $welcomeMessage; ?>
+        </h2>
         <div class="collection">
             <!-- Profile content goes here -->
         </div>
